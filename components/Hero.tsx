@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section className="section hero ">
+    <section className="section hero">
       <div className="container md:flex md:justify-between">
         <p className="md:hidden mb-6 font-thin leading-none uppercase max-w-[116px] ml-auto text-[37px] tracking-[1.67px]">
           <span className="font-medium w-full ">7</span>

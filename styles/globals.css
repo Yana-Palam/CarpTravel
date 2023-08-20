@@ -16,17 +16,35 @@
     font-size: 14px;
     color: #fff;
     background-color: #d9d9d9;
+
+    @apply text-[14px] md:text-[16px] xl:text-[18px];
   }
 }
 
 @layer components {
   .section {
-    padding: 104px 0;
     width: 100%;
+    @apply py-14 md:py-16 xl:py-[104px];
+  }
+
+  .section-title {
+    @apply uppercase text-[40px] font-thin leading-[1.4] tracking-tighter mb-6 md:leading-[1.21] md:text-[67px] xl:text-[98px];
+  }
+
+  .section-title-accent {
+    @apply font-medium;
+  }
+
+  .section-text {
+    @apply font-extralight leading-[1.43]  md:leading-[1.25]  xl:leading-[1.33];
+  }
+
+  .section-text-accent {
+    @apply font-normal;
   }
 
   .container {
-    @apply w-full mx-auto px-5 xs:w-[480px] md:px-8 md:w-[768px] xl:w-[1280px] xl:p-6;
+    @apply w-full mx-auto px-5 xs:w-[480px] md:px-8 md:w-[768px] xl:w-[1280px] xl:px-6;
   }
 
   .hero-bg-mob {
@@ -58,7 +76,40 @@
       );
   }
   .hero {
-    @apply hero-bg-mob bg-cover pt-[106px] pb-[56px] md:pt-[124px] md:pb-16 md:hero-bg-tab xl:pt-[106px] xl:pb-[104px] xl:hero-bg-desk;
+    @apply hero-bg-mob bg-cover bg-center pt-[106px] md:pt-[124px] md:pb-16 md:hero-bg-tab xl:pt-[106px] xl:pb-[104px] xl:hero-bg-desk;
+  }
+
+  .about-bg-mob {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-mob.webp) type("image/webp") 1x,
+        url(/images/about-bg-mob@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-mob.jpg) 1x,
+        url(/images/about-bg-mob@2x.jpg) 2x
+      );
+  }
+
+  .about-bg-tab {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-tab.webp) type("image/webp") 1x,
+        url(/images/about-bg-tab@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-tab.jpg) 1x,
+        url(/images/about-bg-tab@2x.jpg) 2x
+      );
+  }
+  .about-bg-desk {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-desk.webp) type("image/webp") 1x,
+        url(/images/about-bg-desk@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-desk.jpg) 1x,
+        url(/images/about-bg-desk@2x.jpg) 2x
+      );
+  }
+
+  .about {
+    @apply about-bg-mob bg-cover bg-center xs:about-bg-tab xs:bg-left xl:about-bg-desk;
   }
 }
 
