@@ -68,7 +68,7 @@
   position: absolute;
   height: 100%;
   width: 42px;
-  background-image: url(../public/images/hero-btn-icon-left.svg);
+  background-image: url(/images/hero-btn-icon-left.svg);
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@
   position: absolute;
   height: 100%;
   width: 42px;
-  background-image: url(../public/images/hero-btn-icon-right.svg);
+  background-image: url(/images/hero-btn-icon-right.svg);
   background-position-x: right;
   background-repeat: no-repeat;
   top: 0;
