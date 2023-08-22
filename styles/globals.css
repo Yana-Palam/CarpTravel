@@ -141,3 +141,13 @@
 
   @apply xl:bg-cover;
 }
+
+.services .services-btn-active {
+  @apply font-medium text-white relative pl-[14px];
+}
+
+.services-btn-active::before {
+  content: "";
+  background: #fff;
+  @apply block absolute top-1/2 left-0 rotate-45 -translate-y-1/2 w-[6px] h-[6px];
+}
