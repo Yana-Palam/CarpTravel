@@ -19,7 +19,7 @@ const config: Config = {
       tighter: "-.04em",
       // tight: "-.025em",
       normal: "0",
-      // wide: ".025em",
+      wide: ".2em",
       // wider: ".05em",
       widest: ".09em",
     },

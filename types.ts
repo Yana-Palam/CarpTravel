@@ -8,3 +8,12 @@ export type ServicesSlideProps = {
   description: string;
   onClickBtn: (index: number) => void;
 };
+
+export type CareerFormFields = {
+  fullName: string;
+  email: string;
+  position: string;
+  phone: string;
+  message: string;
+  policy: boolean;
+};

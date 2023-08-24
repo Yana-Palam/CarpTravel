@@ -47,6 +47,19 @@
     @apply w-full mx-auto px-5 xs:w-[480px] md:px-8 md:w-[768px] xl:w-[1280px] xl:px-6;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
   .hero-bg-mob {
     background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       image-set(
@@ -150,4 +163,57 @@
   content: "";
   background: #fff;
   @apply block absolute top-1/2 left-0 rotate-45 -translate-y-1/2 w-[6px] h-[6px];
+}
+
+.form-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  @apply block w-full h-6 px-2 text-[13px] leading-[1.84] font-extralight;
+}
+
+.form-textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  @apply block w-full h-[196px] px-2 resize-none text-[13px] leading-[1.84] font-extralight;
+}
+
+.career-checked-label.error .career-check-icon {
+  border-color: #ff5757;
+}
+
+.input-wrap.error {
+  color: #ff5757;
+}
+.input-wrap {
+  @apply xl:mb-[26px];
+}
+
+.form-input::placeholder {
+  @apply text-[13px] leading-[1.84] font-extralight text-white/20;
+}
+
+.career-checked-input:checked
+  + .career-checked-label
+  .career-check-icon-inside {
+  opacity: 1;
+}
+.career-check-icon {
+  border: 1px solid #fff;
+  @apply relative min-w-[22px] h-[22px] cursor-pointer;
+}
+
+.career-check-icon-inside {
+  opacity: 0.1;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @apply block absolute w-[14px] h-[14px];
+}
+
+.career-form-error {
+  color: #ff5757;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 12px;
+  font-weight: 200;
+  @apply text-[12px] font-extralight leading-loose tracking-wide absolute right-0 pl-4 flex items-center gap-1;
 }
