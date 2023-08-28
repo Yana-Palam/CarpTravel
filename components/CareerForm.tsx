@@ -191,7 +191,7 @@ const CareerForm: FC = () => {
         </div>
 
         <button
-          className="uppercase text-[30px] font-medium block ml-auto "
+          className="uppercase text-[30px] font-medium block ml-auto xl:text-[32px] "
           type="submit"
         >
           Send

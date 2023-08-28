@@ -17,3 +17,8 @@ export type CareerFormFields = {
   message: string;
   policy: boolean;
 };
+export type ContactsFormFields = {
+  fullName: string;
+  email: string;
+  message: string;
+};
