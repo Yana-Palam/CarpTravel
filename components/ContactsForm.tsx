@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { ContactsFormFields } from "@/types";
 import { useForm, SubmitHandler } from "react-hook-form";
+import toast from "react-hot-toast";
 import { registerOptions } from "@/helpers/contacts";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const ContactsForm: FC = () => {
   const {
     register,
-    formState: { errors, isSubmitted },
+    formState: { errors },
     handleSubmit,
-    control,
     reset,
   } = useForm<ContactsFormFields>({
     shouldFocusError: false,
@@ -17,6 +17,8 @@ const ContactsForm: FC = () => {
 
   const onSubmit: SubmitHandler<ContactsFormFields> = (data) => {
     console.log("submit", data);
+
+    toast.success("Your data has been sent");
 
     reset();
   };

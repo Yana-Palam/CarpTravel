@@ -3,6 +3,7 @@
 import { FC, useState } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import InputMaskCorrect from "./InputMaskCorrect";
+import toast from "react-hot-toast";
 import { CareerFormFields } from "@/types";
 import { registerOptions } from "@/helpers/career";
 import ErrorIcon from "../public/icons/error-icon.svg";
@@ -10,7 +11,7 @@ import ErrorIcon from "../public/icons/error-icon.svg";
 const CareerForm: FC = () => {
   const {
     register,
-    formState: { errors, isSubmitted },
+    formState: { errors },
     handleSubmit,
     control,
     reset,
@@ -18,10 +19,10 @@ const CareerForm: FC = () => {
     shouldFocusError: false,
   });
 
-  const [tel, setTel] = useState("");
-
   const onSubmit: SubmitHandler<CareerFormFields> = (data) => {
     console.log("submit", data);
+
+    toast.success("Your data has been sent");
 
     reset();
   };
@@ -71,7 +72,7 @@ const CareerForm: FC = () => {
             <input
               id="email"
               type="text"
-              placeholder="Jjohnsmith@email.com"
+              placeholder="johnsmith@email.com"
               className="form-input"
               {...register("email", registerOptions.email)}
             />
