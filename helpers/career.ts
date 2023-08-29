@@ -58,6 +58,6 @@ export const registerOptions: Record<string, RegisterOptions> = {
   },
 
   policy: {
-    required: true,
+    required: "Required",
   },
 };

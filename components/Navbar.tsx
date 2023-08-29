@@ -1,6 +1,8 @@
+"use client";
+
 import { FC, useState } from "react";
 import { Link } from "react-scroll";
-import { navigation } from "@/utils/navigation";
+import { navigation } from "@/helpers/navigation";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

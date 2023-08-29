@@ -1,18 +1,10 @@
 "use client";
 
-import { FC, JSXElementConstructor, ReactElement } from "react";
-import InputMask from "react-input-mask";
-import {
-  useForm,
-  SubmitHandler,
-  useWatch,
-  Controller,
-  ControllerFieldState,
-  ControllerRenderProps,
-  UseFormStateReturn,
-} from "react-hook-form";
+import { FC, useState } from "react";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import InputMaskCorrect from "./InputMaskCorrect";
 import { CareerFormFields } from "@/types";
-import { registerOptions } from "@/utils/career";
+import { registerOptions } from "@/helpers/career";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const CareerForm: FC = () => {
@@ -23,9 +15,10 @@ const CareerForm: FC = () => {
     control,
     reset,
   } = useForm<CareerFormFields>({
-    // mode: "onBlur",
     shouldFocusError: false,
   });
+
+  const [tel, setTel] = useState("");
 
   const onSubmit: SubmitHandler<CareerFormFields> = (data) => {
     console.log("submit", data);
@@ -127,12 +120,30 @@ const CareerForm: FC = () => {
             >
               Phone
             </label>
-            <input
-              type="text"
-              id="phone"
-              placeholder="+ 38 (097) 12 34 567"
-              className="form-input"
-              {...register("phone", registerOptions.phone)}
+            <Controller
+              name="phone"
+              control={control}
+              defaultValue=""
+              rules={registerOptions.phone}
+              render={({ field }) => (
+                <InputMaskCorrect
+                  mask="+ 38 (999) 99 99 999"
+                  maskChar=""
+                  value={field.value}
+                  onChange={field.onChange}
+                >
+                  {(inputProps: any) => (
+                    <input
+                      className="form-input"
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="+ 38 (097) 12 34 567"
+                      {...inputProps}
+                    />
+                  )}
+                </InputMaskCorrect>
+              )}
             />
             {errors.phone && (
               <p role="alert" className="career-form-error">
@@ -177,7 +188,7 @@ const CareerForm: FC = () => {
           />
           <label
             className={`flex gap-2 text-[12px] font-extralight leading-[1.83] career-checked-label ${
-              errors.message ? "error" : ""
+              errors.policy ? "error" : ""
             }`}
             htmlFor="policy"
           >

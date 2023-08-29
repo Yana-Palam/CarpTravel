@@ -60,6 +60,11 @@
     overflow: hidden;
   }
 
+  .logo-text {
+    font-family: Karantina;
+    @apply text-sm/[14px] tracking-[2.59px];
+  }
+
   .mob-menu {
     background: rgba(1, 10, 5, 0.75);
     backdrop-filter: blur(25px);

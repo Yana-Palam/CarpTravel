@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ContactsFormFields } from "@/types";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { registerOptions } from "@/utils/contacts";
+import { registerOptions } from "@/helpers/contacts";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const ContactsForm: FC = () => {

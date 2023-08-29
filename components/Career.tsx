@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import CareerForm from "./CareerForm";
 import bg from "../public/images/career-bg.jpg";
-import { advantages } from "@/utils/career";
+import { advantages } from "@/helpers/career";
 
 const Career: FC = () => {
   return (

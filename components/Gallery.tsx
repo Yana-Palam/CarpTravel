@@ -1,7 +1,9 @@
+"use client";
+
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { galleryImages } from "@/utils/gallery";
+import { galleryImages } from "@/helpers/gallery";
 import bg from "../public/images/gallery-bg.jpg";
 
 import { Navigation } from "swiper/modules";

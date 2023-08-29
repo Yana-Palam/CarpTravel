@@ -3,4 +3,4 @@ export const emailRegex =
 
 export const fullNameRegex = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+))+$/i;
 
-export const phoneRegex = /^\+\d+$/;
+export const phoneRegex = /^\+\s\d{2}\s\(\d{3}\)\s\d{2}\s\d{2}\s\d{3}$/;

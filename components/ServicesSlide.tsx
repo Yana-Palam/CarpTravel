@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { buttonText } from "@/utils/services-slides";
+import { buttonText } from "@/helpers/services-slides";
 import { ServicesSlideProps } from "@/types";
 
 const ServicesSlide: FC<ServicesSlideProps> = ({

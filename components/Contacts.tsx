@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import bg from "../public/images/contacts-bg.jpg";
 import ContactsForm from "./ContactsForm";
-import { socialLinks } from "@/utils/contacts";
+import { socialLinks } from "@/helpers/contacts";
 
 const Contacts: FC = () => {
   return (

@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-import styles from "../styles/Logo.module.css";
 
 const Logo: FC = () => {
   return (
@@ -12,7 +11,7 @@ const Logo: FC = () => {
         alt="logo"
         className="mb-[2px]"
       />
-      <p className={styles.text}>CarpTravel</p>
+      <p className="logo-text">CarpTravel</p>
     </div>
   );
 };
