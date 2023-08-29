@@ -8,12 +8,12 @@ const Header: FC = () => {
       <div className="container flex justify-between items-center">
         <Logo />
         <Navbar />
-        <button
+        {/* <button
           type="button"
           className="text-sm tracking-[1.4px] uppercase md:hidden"
         >
           Menu
-        </button>
+        </button> */}
       </div>
     </header>
   );

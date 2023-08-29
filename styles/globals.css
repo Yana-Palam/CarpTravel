@@ -60,6 +60,12 @@
     overflow: hidden;
   }
 
+  .mob-menu {
+    background: rgba(1, 10, 5, 0.75);
+    backdrop-filter: blur(25px);
+    @apply flex justify-center items-center;
+  }
+
   .hero-bg-mob {
     background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       image-set(
