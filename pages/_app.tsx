@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Layout>
     <Head>
+      <title>CarpTravel</title>
       <link rel="icon" href="/favicon.svg" />
     </Head>
     <main>

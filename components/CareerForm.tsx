@@ -186,17 +186,16 @@ const CareerForm: FC = () => {
             className="visually-hidden career-checked-input"
             {...register("policy", registerOptions.policy)}
           />
-          <label
+          <div
             className={`flex gap-2 text-[12px] font-extralight leading-[1.83] career-checked-label ${
               errors.policy ? "error" : ""
             }`}
-            // htmlFor="policy"
           >
-            <div className="career-check-icon">
+            <label className="career-check-icon" htmlFor="policy">
               <span className="career-check-icon-inside"></span>
-            </div>
+            </label>
             <span>{content.career.form.labels.policy}</span>
-          </label>
+          </div>
         </div>
 
         <button
