@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "react-scroll";
 import content from "../helpers/content.json";
 

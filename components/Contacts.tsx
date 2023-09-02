@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import Image from "next/image";
 import bg from "../public/images/contacts-bg.jpg";
