@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
+import content from "../helpers/content.json";
 import { buttonText } from "@/helpers/services-slides";
 import { ServicesSlideProps } from "@/types";
 
@@ -26,7 +27,10 @@ const ServicesSlide: FC<ServicesSlideProps> = ({
       <div className="container flex  flex-col  h-[739px] md:flex-row md:gap-[18px] md:h-[493px] xl:hidden">
         <div>
           <h2 className="section-title">
-            We <span className="section-title-accent">offer</span>
+            {content.services.title.accent}
+            <span className="section-title-accent">
+              {content.services.title.main}
+            </span>
           </h2>
           <p className="block md:hidden text-[43px] font-thin text-right mb-4">
             0{active}/<span className="text-white/20 ">0{total}</span>
@@ -79,7 +83,10 @@ const ServicesSlide: FC<ServicesSlideProps> = ({
       <div className="hidden container  xl:flex gap-5">
         <div className="min-w-[608px] basis-[608px]">
           <h2 className="section-title">
-            We <span className="section-title-accent">offer</span>
+            {content.services.title.accent}
+            <span className="section-title-accent">
+              {content.services.title.main}
+            </span>
           </h2>
           <Image
             src={picture}

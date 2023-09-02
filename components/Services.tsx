@@ -1,10 +1,10 @@
 "use client";
 
 import { FC, useState } from "react";
-import { EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ServicesSlide from "./ServicesSlide";
+import { EffectFade } from "swiper/modules";
 import { slides } from "@/helpers/services-slides";
+import ServicesSlide from "./ServicesSlide";
 
 import "swiper/css";
 import "swiper/css/effect-fade";

@@ -1,8 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
-import CareerForm from "./CareerForm";
 import bg from "../public/images/career-bg.jpg";
 import { advantages } from "@/helpers/career";
+import content from "../helpers/content.json";
+import CareerForm from "./CareerForm";
 
 const Career: FC = () => {
   return (
@@ -19,16 +20,18 @@ const Career: FC = () => {
         <div className="container">
           <div className="mb-9 md:flex md:justify-between md:mb-3">
             <h2 className="section-title md:mb-0">
-              Choose <span className="section-title-accent">us</span>
+              {content.career.title.accent}
+              <span className="section-title-accent">
+                {content.career.title.main}
+              </span>
             </h2>
             <p className="section-text w-2/3 ml-auto md:max-w-[221px] md:text-justify md:text-[13px] md:leading-[1.53]">
-              Your chance to join our passionate team in Carpathian tourism.
-              Seeking talented professionals to share our common mission.
+              {content.career.description}
             </p>
           </div>
           <div className="md:hidden">
             <h3 className="uppercase text-[30px] font-thin leading-[1.21] mb-9 w-2/3 ml-auto">
-              Why us ?
+              {content.career.subTitle}
             </h3>
             <ul className="w-2/3 text-right">
               {advantages.map(({ title, text }, index) => (
@@ -54,20 +57,21 @@ const Career: FC = () => {
         <div className="container">
           <div className="hidden md:flex md:justify-between mb-3 xl:mb-6">
             <h2 className="section-title md:mb-0">
-              Choose <span className="section-title-accent">us</span>
+              {content.career.title.accent}
+              <span className="section-title-accent">
+                {content.career.title.main}
+              </span>
             </h2>
             <p className="section-text w-2/3 ml-auto md:max-w-[221px] md:text-justify md:text-[13px] md:leading-[1.53] xl:max-w-[293px] xl:text-[18px] xl:leading-[1.33]">
-              Your chance to join our passionate team in Carpathian tourism.
-              Seeking talented professionals to share our common mission.
+              {content.career.description}
             </p>
           </div>
           <div className="xl:mb-14 xl:flex xl:w-3/4 xl:justify-between">
             <h3 className="hidden md:block w-[221px] uppercase text-[30px] font-thin leading-[1.21] mb-14  text-right xl:mb-0 xl:w-[290px]">
-              Why us ?
+              {content.career.subTitle}
             </h3>
             <p className=" hidden section-text  xl:text-[18px] xl:leading-[1.33] xl:w-[300px] xl:block xl:pr-[60px]">
-              Don't miss your opportunity! Fill out the form right now and join
-              our team!
+              {content.career.text}
             </p>
           </div>
 
@@ -88,8 +92,7 @@ const Career: FC = () => {
             </div>
             <div className="grow xl:w-1/2 xl:basis-1/2 ">
               <p className="section-text w-[221px]  mb-8 md:text-[13px] md:leading-[1.53] md:w-[179px] xl:text-[18px] xl:leading-[1.33] xl:w-[235px] xl:hidden">
-                Don't miss your opportunity! Fill out the form right now and
-                join our team!
+                {content.career.text}
               </p>
               <CareerForm />
             </div>

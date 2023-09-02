@@ -1,0 +1,91 @@
+{
+  "header": {
+    "logoText": "CarpTravel"
+  },
+  "hero": {
+    "titleAccent": "Uncover",
+    "title": " Carpathian’s Secrets",
+    "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
+    "text": "Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel",
+    "btnText": "Join now",
+    "preTitle": ["7", "days", "journey"]
+  },
+  "about": {
+    "titleAccent": "Who ",
+    "title": "we are",
+    "description": [
+      "From vacationers",
+      "to active travelers",
+      "we have a tour for everyone."
+    ],
+    "text1": {
+      "accent": "a team of enthusiasts ",
+      "main": "who are fully committed to the mission of creating unforgettable and extraordinary trips to the most beautiful parts of the Carpathians. Our goal is not just to show you the natural wonders of the mountains, but to provide you with a deep immersion in their magical atmosphere."
+    },
+    "text2": {
+      "accent": "We believe",
+      "main": " that nature has the power to inspire, strengthen character and provide new perspectives. Therefore, each of our tours is aimed at unlocking your potential, enriching your spiritual world and creating unforgettable memories."
+    },
+    "text3": {
+      "accent": "We use methods ",
+      "main": "that are time-tested and proven. Our expert guides with in-depth knowledge of the Carpathian landscapes lead you safely through the mysteries of these mountains."
+    }
+  },
+  "services": {
+    "title": {
+      "accent": "We ",
+      "main": "offer"
+    }
+  },
+  "career": {
+    "title": {
+      "accent": "Choose ",
+      "main": "us"
+    },
+    "subTitle": "Why us ?",
+    "description": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.",
+    "text": "Don't miss your opportunity! Fill out the form right now and join our team!",
+    "form": {
+      "labels": {
+        "fullName": "Full name",
+        "email": "E-mail",
+        "position": "Position",
+        "phone": "Phone",
+        "message": "Message",
+        "policy": "I confirm my consent to the processing of personal data."
+      },
+      "btnSubmit": "Send"
+    }
+  },
+  "gallery": {
+    "title": {
+      "accent": "Our ",
+      "main": "gallery"
+    },
+    "navigation": {
+      "prevBtn": "Back",
+      "nextBtn": "Next"
+    }
+  },
+  "contacts": {
+    "title": {
+      "accent": "Contact ",
+      "main": "us"
+    },
+    "contacts": {
+      "phones": ["38 (098) 12 34 567", "+38 (073) 12 34 567"],
+      "phonesTitle": "Phone number",
+      "email": "support@carptravel.com",
+      "emailTitle": "E-mail",
+      "socialsTitle": "Follow us"
+    },
+    "form": {
+      "labels": {
+        "fullName": "Full name",
+        "email": "E-mail",
+        "message": "Message"
+      },
+      "btnSubmit": "Send"
+    }
+  }
+}

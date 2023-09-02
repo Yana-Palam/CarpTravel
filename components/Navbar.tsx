@@ -27,7 +27,8 @@ const Navbar: FC = () => {
                 smooth={true}
                 duration={500}
                 onClick={() => setIsOpen(false)}
-                className="text-[18px] md:text-[14px]  tracking-[1.4px] cursor-pointer"
+                className="text-[18px] md:text-[14px]  tracking-[1.4px] cursor-pointer hover:underline focus:underline transition-all duration-300 "
+                href="/"
               >
                 {title}
               </Link>

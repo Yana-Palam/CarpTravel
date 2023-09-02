@@ -1,10 +1,9 @@
-"use client";
-
-import { FC, useState } from "react";
+import { FC } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import InputMaskCorrect from "./InputMaskCorrect";
 import toast from "react-hot-toast";
 import { CareerFormFields } from "@/types";
+import content from "../helpers/content.json";
 import { registerOptions } from "@/helpers/career";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
@@ -40,7 +39,7 @@ const CareerForm: FC = () => {
               htmlFor="fullName"
               className="block  text-[12px] text-inherit font-extralight leading-loose tracking-wide mb-1"
             >
-              Full name
+              {content.career.form.labels.fullName}
             </label>
             <input
               id="fullName"
@@ -67,7 +66,7 @@ const CareerForm: FC = () => {
               htmlFor="email"
               className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
             >
-              E-mail
+              {content.career.form.labels.email}
             </label>
             <input
               id="email"
@@ -93,7 +92,7 @@ const CareerForm: FC = () => {
               htmlFor="position"
               className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
             >
-              Position
+              {content.career.form.labels.position}
             </label>
             <input
               id="position"
@@ -119,7 +118,7 @@ const CareerForm: FC = () => {
               htmlFor="phone"
               className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
             >
-              Phone
+              {content.career.form.labels.phone}
             </label>
             <Controller
               name="phone"
@@ -164,7 +163,7 @@ const CareerForm: FC = () => {
             htmlFor="message"
             className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
           >
-            Message
+            {content.career.form.labels.message}
           </label>
           <textarea
             id="message"
@@ -191,22 +190,20 @@ const CareerForm: FC = () => {
             className={`flex gap-2 text-[12px] font-extralight leading-[1.83] career-checked-label ${
               errors.policy ? "error" : ""
             }`}
-            htmlFor="policy"
+            // htmlFor="policy"
           >
             <div className="career-check-icon">
               <span className="career-check-icon-inside"></span>
             </div>
-            <span>
-              I confirm my consent to the processing of personal data.
-            </span>
+            <span>{content.career.form.labels.policy}</span>
           </label>
         </div>
 
         <button
-          className="uppercase text-[30px] font-medium block ml-auto xl:text-[32px] "
+          className="uppercase text-[30px] font-medium block ml-auto xl:text-[32px]  hover:underline focus:underline transition-all duration-300 "
           type="submit"
         >
-          Send
+          {content.career.form.btnSubmit}
         </button>
       </div>
     </form>

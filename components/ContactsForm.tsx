@@ -3,6 +3,7 @@ import { ContactsFormFields } from "@/types";
 import { useForm, SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
 import { registerOptions } from "@/helpers/contacts";
+import content from "../helpers/content.json";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const ContactsForm: FC = () => {
@@ -35,13 +36,13 @@ const ContactsForm: FC = () => {
           }`}
         >
           <label
-            htmlFor="fullName"
+            htmlFor="contacts-fullName"
             className="block  text-[12px] text-inherit font-extralight leading-loose tracking-wide mb-1"
           >
-            Full name
+            {content.contacts.form.labels.fullName}
           </label>
           <input
-            id="fullName"
+            id="contacts-fullName"
             type="text"
             placeholder="John Smith"
             className="form-input"
@@ -61,13 +62,13 @@ const ContactsForm: FC = () => {
           }`}
         >
           <label
-            htmlFor="email"
+            htmlFor="contacts-email"
             className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
           >
-            E-mail
+            {content.contacts.form.labels.email}
           </label>
           <input
-            id="email"
+            id="contacts-email"
             type="text"
             placeholder="Jjohnsmith@email.com"
             className="form-input"
@@ -89,13 +90,13 @@ const ContactsForm: FC = () => {
           }`}
         >
           <label
-            htmlFor="message"
+            htmlFor="contacts-message"
             className="block text-[12px] font-extralight leading-loose tracking-wide mb-1"
           >
-            Message
+            {content.contacts.form.labels.message}
           </label>
           <textarea
-            id="message"
+            id="contacts-message"
             className="form-textarea md:h-[228px] xl:h-[258px]"
             {...register("message", registerOptions.message)}
           />
@@ -107,10 +108,10 @@ const ContactsForm: FC = () => {
           )}
         </div>
         <button
-          className="uppercase text-[30px] font-medium block ml-auto xl:text-[32px]"
+          className="uppercase text-[30px] font-medium block ml-auto xl:text-[32px]  hover:underline focus:underline transition-all duration-300 "
           type="submit"
         >
-          Send
+          {content.contacts.form.btnSubmit}
         </button>
       </div>
     </form>

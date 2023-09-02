@@ -1,10 +1,11 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { galleryImages } from "@/helpers/gallery";
 import bg from "../public/images/gallery-bg.jpg";
+import content from "../helpers/content.json";
+import { galleryImages } from "@/helpers/gallery";
 
 import { Navigation } from "swiper/modules";
 
@@ -32,7 +33,10 @@ const Gallery: FC = () => {
       />
       <div className="container">
         <h2 className="section-title">
-          Our <span className="section-title-accent">gallery</span>
+          {content.gallery.title.accent}
+          <span className="section-title-accent">
+            {content.gallery.title.main}
+          </span>
         </h2>
         <div className="md:hidden">
           <Swiper
@@ -98,18 +102,18 @@ const Gallery: FC = () => {
           )}
           <div className="absolute flex justify-between flex-row bottom-4 inset-x-9 xl:inset-x-56 text-[33px] font-thin z-10">
             <button
-              className="uppercase hover:opacity-75 duration-300"
+              className="uppercase hover:opacity-75  hover:underline focus:underline transition-all duration-300"
               aria-label="Previous"
               ref={prevRef}
             >
-              Back
+              {content.gallery.navigation.prevBtn}
             </button>
             <button
-              className="uppercase hover:opacity-75 duration-300"
+              className="uppercase hover:opacity-75  hover:underline focus:underline transition-all duration-300 "
               aria-label="Next"
               ref={nextRef}
             >
-              Next
+              {content.gallery.navigation.nextBtn}
             </button>
           </div>
         </div>
