@@ -17,6 +17,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/ogLogo.jpg" />
+      <meta property="og:image" content="images/ogLogo.png" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="300" />
       <meta property="og:description" content="Uncover Carpathian’s Secrets" />
       <meta property="og:title" content="CarpTravel" />
       <meta property="og:url" content="https://carp-travel-eta.vercel.app/" />
