@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { CareerFormFields } from "@/types";
 import content from "../helpers/content.json";
 import { registerOptions } from "@/helpers/career";
-import { sendDataToTelegram } from "@/utils/sendDataToTelegram";
+import { sendCareerDataToTelegram } from "@/utils/sendDataToTelegram";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const CareerForm: FC = () => {
@@ -21,7 +21,7 @@ const CareerForm: FC = () => {
 
   const onSubmit: SubmitHandler<any> = async (data) => {
     try {
-      await sendDataToTelegram(data);
+      await sendCareerDataToTelegram(data);
 
       toast.success("Your data has been sent");
       reset();

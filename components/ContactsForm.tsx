@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
 import { registerOptions } from "@/helpers/contacts";
 import content from "@/helpers/content.json";
-import { sendDataToTelegram } from "@/utils/sendDataToTelegram";
+import { sendContactDataToTelegram } from "@/utils/sendDataToTelegram";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const ContactsForm: FC = () => {
@@ -17,9 +17,9 @@ const ContactsForm: FC = () => {
     shouldFocusError: false,
   });
 
-  const onSubmit: SubmitHandler<any> = async (data) => {
+  const onSubmit: SubmitHandler<ContactsFormFields> = async (data) => {
     try {
-      await sendDataToTelegram(data);
+      await sendContactDataToTelegram(data);
 
       toast.success("Your data has been sent");
       reset();
