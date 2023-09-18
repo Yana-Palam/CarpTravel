@@ -7,7 +7,7 @@ import content from "@/helpers/content.json";
 import { sendDataToTelegram } from "@/utils/sendDataToTelegram";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
-const ContactsForm: FC = () => {
+export const ContactsForm: FC = () => {
   const {
     register,
     formState: { errors },
@@ -17,15 +17,22 @@ const ContactsForm: FC = () => {
     shouldFocusError: false,
   });
 
-  const onSubmit: SubmitHandler<any> = async (data) => {
-    try {
-      await sendDataToTelegram(data);
+  const onSubmit: SubmitHandler<ContactsFormFields> = (data) => {
+    console.log("submit", data);
 
-      toast.success("Your data has been sent");
-      reset();
-    } catch (error) {
-      toast.error("Something went wrong");
+    let message = "";
+
+    for (const key in data) {
+      if (Object.prototype.hasOwnProperty.call(data, key)) {
+        message += data[key];
+      }
     }
+
+    sendDataToTelegram(message);
+
+    toast.success("Your data has been sent");
+
+    reset();
   };
 
   return (
@@ -121,5 +128,3 @@ const ContactsForm: FC = () => {
     </form>
   );
 };
-
-export default ContactsForm;

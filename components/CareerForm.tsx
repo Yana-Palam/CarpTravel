@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { CareerFormFields } from "@/types";
 import content from "../helpers/content.json";
 import { registerOptions } from "@/helpers/career";
+import { sendDataToTelegram } from "@/utils/sendDataToTelegram";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const CareerForm: FC = () => {
@@ -18,12 +19,15 @@ const CareerForm: FC = () => {
     shouldFocusError: false,
   });
 
-  const onSubmit: SubmitHandler<CareerFormFields> = (data) => {
-    console.log("submit", data);
+  const onSubmit: SubmitHandler<any> = async (data) => {
+    try {
+      await sendDataToTelegram(data);
 
-    toast.success("Your data has been sent");
-
-    reset();
+      toast.success("Your data has been sent");
+      reset();
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
   };
 
   return (
