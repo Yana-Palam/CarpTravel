@@ -6,6 +6,7 @@ import { CareerFormFields } from "@/types";
 import content from "../helpers/content.json";
 import { registerOptions } from "@/helpers/career";
 import { sendCareerDataToTelegram } from "@/utils/sendDataToTelegram";
+import { sendDataToGoogleSheets } from "@/utils/sendDataToGoogleSheets";
 import ErrorIcon from "../public/icons/error-icon.svg";
 
 const CareerForm: FC = () => {
@@ -22,6 +23,7 @@ const CareerForm: FC = () => {
   const onSubmit: SubmitHandler<any> = async (data) => {
     try {
       await sendCareerDataToTelegram(data);
+      await sendDataToGoogleSheets(data);
 
       toast.success("Your data has been sent");
       reset();
