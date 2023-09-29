@@ -1,11 +1,10 @@
 import axios from "axios";
 import { CareerFormFields } from "@/types";
-const GOOGLE_SHEETS_SCRIPT_URL = process.env
-  .NEXT_PUBLIC_GOOGLE_SHEETS_SCRIPT_URL as string;
 
 export const sendDataToGoogleSheets = async (data: CareerFormFields) => {
+  const reqData = { ...data, phone: data.phone.replace("+", " +") };
   try {
-    await axios.post(GOOGLE_SHEETS_SCRIPT_URL, data);
+    await axios.post("/api/googleSheet", reqData);
   } catch (error) {
     throw new Error();
   }
